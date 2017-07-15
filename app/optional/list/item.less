@@ -1,0 +1,76 @@
+@import "../../less/global";
+
+.items {
+  top: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-right: -30px;
+  .up {
+    border-left-color: @upColor!important;
+  }
+  .down {
+    border-left-color: @downColor!important;
+  }
+  .item {
+    position: relative;
+    border-bottom: 1px solid @lineColor;
+    border-top: 1px solid @lineColor;
+    border-left: 4px solid gray;
+    height: 145px;
+    .title {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+    .operator {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 5px;
+      right: 30px;
+      display: none;
+      text-align: center;
+      cursor: pointer;
+    }
+    &:hover .operator {
+      display: block;
+    }
+    .content {
+      float: left;
+      height: 145px;
+      width: 50%;
+      vertical-align: middle;
+      text-align: center;
+      //padding-left: 5px;
+      margin:0px auto;
+      padding:0px;
+      &:hover {
+        background-color: @panelBgHoverColor;
+      }
+      div {
+        font-size: 20px;
+      }
+      .first {
+        margin-top: 35px;
+      }
+    }
+    .bottom {
+      clear: both;
+      position: absolute;
+      top:90px;
+      text-align: center;
+      width: 20%;
+      left:40%;
+      span{
+        display: block;
+        font-size: 15px;
+      }
+      .up {
+        color: @upColor;
+      }
+      .down {
+        color: @downColor;
+      }
+    }
+  }
+}
